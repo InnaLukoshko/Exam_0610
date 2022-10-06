@@ -44,6 +44,7 @@ public class General {
                 default:
                     System.out.println("Ошибка ввода действия");
             }
+
         }
     }
 
@@ -77,16 +78,16 @@ public class General {
         String twoLetters = reader.readLine();
 
         if (twoLetters.equalsIgnoreCase("au")) {
-            autosList.stream()
-                    .filter(x -> x.getMark().equals(Marks.AUDI))
+            historyOfSalesList.stream()
+                    .filter(x -> x.getAuto().getMark().equals(Marks.AUDI))
                     .forEach(x -> System.out.println(x));
         } else if (twoLetters.equalsIgnoreCase("bm")) {
-            autosList.stream()
-                    .filter(x -> x.getMark().equals(Marks.BMW))
+            historyOfSalesList.stream()
+                    .filter(x -> x.getAuto().getMark().equals(Marks.BMW))
                     .forEach(x -> System.out.println(x));
         } else if (twoLetters.equalsIgnoreCase("ge")) {
-            autosList.stream()
-                    .filter(x -> x.getMark().equals(Marks.GEELY))
+            historyOfSalesList.stream()
+                    .filter(x -> x.getAuto().getMark().equals(Marks.GEELY))
                     .forEach(x -> System.out.println(x));
 
 //        public static void findHistoryAuto () {
